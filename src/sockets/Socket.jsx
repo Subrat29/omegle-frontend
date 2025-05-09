@@ -6,6 +6,6 @@ import React, { useContext, useMemo } from "react";
 const SocketContext = React.createContext();
 export const useSocket = () => useContext(SocketContext);
 export const Socket = (prop) => {
-  const socket = useMemo(() => io("http://localhost:3001"), []);
+  const socket = useMemo(() => io("http://localhost:3000"), []);
   return <SocketContext value={{ socket }}>{prop.children}</SocketContext>;
 };
